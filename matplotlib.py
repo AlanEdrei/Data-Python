@@ -56,3 +56,67 @@ plt.grid()
 plt.minorticks_on()
 
 plt.show()
+
+
+"""
+Bar
+"""
+
+eje_x = np.arange(0, 10)
+
+plt.bar(eje_x, nivel5, width=1/5)
+plt.bar(eje_x+0.2, nivel4, width=1/5)
+plt.bar(eje_x+0.4, nivel3, width=1/5)
+plt.bar(eje_x+0.6, nivel2, width=1/5)
+plt.bar(eje_x+0.8, nivel1, width=1/5)
+
+plt.show()
+
+"""
+Stacked Vertical Bar Chart
+"""
+
+plt.bar(eje_x, nivel5)
+plt.bar(eje_x, nivel4, bottom=nivel5)
+plt.bar(eje_x, nivel3, bottom=nivel4+nivel5)
+plt.bar(eje_x, nivel2, bottom=nivel3+nivel4+nivel5)
+plt.bar(eje_x, nivel1, bottom=nivel2+nivel3+nivel4+nivel5)
+
+plt.show()
+
+"""
+Scatter Plot
+"""
+
+plt.scatter(eje_x, nivel1, marker="*")
+plt.scatter(eje_x, nivel2)
+plt.scatter(eje_x, nivel3)
+plt.scatter(eje_x, nivel4)
+plt.scatter(eje_x, nivel5)
+
+plt.show()
+
+"""
+Pie Chart
+"""
+
+plt.pie(nivel1, 
+        labels=["México","Colombia", "España", "Estados Unidos", "Ecuador",
+                "Argentina", "Venezuela", "Puerto Rico", "Honduras", "Uruguay"])
+
+plt.show()
+
+"""
+Combine Charts
+"""
+
+plt.bar(eje_x,     nivel1,  width = 1/5)
+plt.bar(eje_x+0.2, nivel2,  width = 1/5)
+
+plt.plot(años, nivel3)
+
+plt.scatter(eje_x, nivel4)
+plt.scatter(eje_x, nivel5)
+
+plt.show()
+
